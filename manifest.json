@@ -1,0 +1,10 @@
+{
+  "name": "Codesmith Ad-Lib",
+  "version": "1.0",
+  "description": "A Codesmith ad-lib.",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["app.js"],
+    "persistent": false
+  }
+}
