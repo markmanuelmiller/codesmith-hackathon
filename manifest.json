@@ -2,9 +2,14 @@
   "name": "Codesmith Ad-Lib",
   "version": "1.0",
   "description": "A Codesmith ad-lib.",
-  "manifest_version": 2,
+  "permissions": ["storage"],
+  "options_page": "options.html",
   "background": {
-    "scripts": ["app.js"],
+    "scripts": ["background.js"],
     "persistent": false
-  }
+  },
+  "page_action": {
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
 }
