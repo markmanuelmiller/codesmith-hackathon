@@ -98,7 +98,7 @@ function generatePrompt(adlib) {
 
   const submitButton = document.createElement('button');
   submitButton.setAttribute('id', 'submit');
-  submitButton.innerText = 'Generate Ad-Lib';
+  submitButton.innerText = 'Generate Mad-Lib';
   document.getElementById('controls').appendChild(submitButton);
 
   submitButton.addEventListener('click', generateAdLib);

@@ -14,7 +14,7 @@
       }
       /* .madlogo{
         display:flex;
-        flex-direction: row;
+        justify-content: center;
         width: 100%;
         height: 20%;
       } */
@@ -41,43 +41,44 @@
         margin-top: 7%;
         padding-right: 2rem;
         margin-right: 0;
-        z-index: 1; */
+        z-index: 0; */
+        width: 300px;
+        /* border-bottom: 7px solid #05a1ea;
+        border-left: 7px solid #05a1ea; */
       }
       #image-container img{
         /* display: flex;
-        margin-top: 13%;
-        justify-content: flex-end;
-        align-items: flex-end;
-        margin-right: 3rem; */
-        width: 40%;
-        border-left: 7px solid #00A8E9;
-        border-bottom: 7px solid #00A8E9;
-
+        margin-right: 3rem;
+        width: 25%;
+        z-index: 2;
+        border: */
+        width: 300px;
+        border-bottom: 7px solid #05a1ea;
+        border-left: 7px solid #05a1ea;
       }
-      /* .middle h2{
-        display: flex;
-        color:white;
-        font-family: Montserrat, sans-serif;
-        font-size: 300%;
-        width: 20%;
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        text-shadow: 2px 2px grey;
-        margin-top: 0;
-      } */
-      #questions {
+      /* #questions {
         display: flex;
         flex-flow: column;
         color: white;
         height: 30rem;
-      }
-      input {
-        /* display: flex; */
+      } */
+      /* input {
+        display: flex;
         margin-top: 1rem;
         border: 2px solid black;
+      } */
+      .shadow {
+        display: flex;
+        flex-wrap:wrap;
+        width: 1%;
+        margin-top: .2%;
+        opacity: 20%;
+        background-color: grey;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        box-shadow: 0 0 0 3px grey;
       }
-  
-      /* ul {
+      h1{
         display: flex;
         flex-direction:column;
         align-items: flex-end;
@@ -172,24 +173,115 @@
         margin-top: 60px;
       }
 
+      ul {
+        display: flex;
+        justify-content: center;
+      }
+
+      ul li {
+        display: inline;
+        margin-right: 50px;
+      }
+
+      h1,h2,h3,h4,h5,h6,p {
+        color: white;
+      }
+
+      div.bio-detail {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      div.section {
+        background-color:#ffffff24;
+        padding: 20px;
+        display: flex;
+      }
+
+      #questions input {
+        width: 300px;
+        height: 40px;
+        display: block;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+
+      #answer {
+        color: white;
+        font-size: 32px;
+        margin: 20px;
+        /* text-shadow: 3px 3px #4a4a4a; */
+        background-color: #32a2ed;
+        padding: 20px;
+      }
+
+      div.answers-container {
+        /* background: white; */
+        /* padding: 20px; */
+      }
+
+      button {
+        font-family: Helvetica;
+        letter-spacing: 0.4em;
+        font-weight: 600;
+        font-size: 13px;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        max-width: 108px;
+        max-height: 30px;
+        outline: 2px solid;
+        outline-color: rgba(71, 126, 232,0.5);
+        outline-offset: 20px;
+        transition: all 600ms cubic-bezier(0.2, 0, 0, 0.8);
+        border: none;
+        background-color: rgba(0,0,0,0);
+      }
+
+      button:hover {
+        color: rgba(71, 126, 232, 0.7);
+        outline-color: rgba(71, 126, 232, 0);
+        outline-offset: 200px;
+      }
+
+      #bio {
+        margin-top: 40px;
+      }
+
+      .bio-info {
+        width: 40%;
+        /* margin-left: 40px; */
+      }
+
+      #controls {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        margin-top: 40px;
+      }
+      
+
     </style>
   </head>
   <body>
-    <div class ="madlogo">  
-      <img id = 'madlibs-logo' src = 'https://i0.wp.com/keysweekly.com/wp-content/uploads/2019/09/madlibs.png?fit=1459%2C482&ssl=1' alt = 'libs-logo'>
-    </div>
-    
 
-    <div class="buttons">
-      <ul>
-        <li><a id="kyle">Kyle Combs</a></li>
-        <li><a id="victoria">Victoria Armada</a></li>
-        <li><a id="eric">Eric Marcatoma</a></li>
-        <li><a id="james">James Dimitrios Kolotouros</a></li>
-        <li><a id="jennifer">Jennifer Courtner</a></li>
-        <li><a id="kyle2">Kyle Juresich</a></li>
-      </ul>
+    <div class="madlogo">
+      <!-- <h1 id="title">Codesmith</h1> -->
+      <img id='madlibs-logo' src ='https://i0.wp.com/keysweekly.com/wp-content/uploads/2019/09/madlibs.png?fit=1459%2C482&ssl=1' alt='libs-logo'>
+      <div></div>
     </div>
+
+    <ul>
+      <li><button id="kyle">Kyle Combs</button></li>
+      <li><button id="victoria">Victoria Armada</button></li>
+      <li><button id="eric">Eric Marcatoma</button></li>
+      <li><button id="james">James Dimitrios Kolotouros</button></li>
+      <li><button id="jennifer">Jennifer Courtner</button></li>
+      <li><button id="kyle2">Kyle Juresich</button></li>
+    </ul>
+
+    
+    <!-- <button>Choose random Ad-Lib</button> -->
 
 
 <div class='middle'>
@@ -208,13 +300,28 @@
     </div>
     
     <div class="ad-lib" id="ad-lib">
-      <div id="questions"></div>
-      <div id="controls"></div>
-
-      <h4 id="prompt"></h4>
-      <div id="answer"></div>
 
       <div id="bio">
+        <div class="bio-detail">
+          <div class="bio-info">
+            <h1 id="bio-name"></h1>
+            <h2 id="bio-title"></h2>
+          </div>
+          <div id="image-container"></div>
+        </div>
+
+        <div class="section">
+          <div class="questions-container">
+            <div id="questions"></div>
+            <div id="controls"></div>
+
+          </div>
+          <div class="answers-container">
+            <h4 id="prompt"></h4>
+            <div id="answer"></div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -225,140 +332,3 @@
   </body>
   <script src="app.js"></script>
 </html>
-
-
-<!-- 
-<!DOCTYPE html>
-<html>
-  <head>
-    
-    <style>
-      /* @importbutton {
-        height: 30px;
-        width: 30px;
-        outline: none;
-      } */
-    body {
-      background-image: url(‘https://miro.medium.com/proxy/1*hjw9b_O45Y20p0koKBDOkA.jpeg’);
-      /* opacity: .3; */
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      }
-      .madlogo{
-        display:flex;
-        flex-direction: row;
-        width: 100%;
-      }
-      #madlibs-logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 40%;
-      margin-top: 1%;
-        width: 30%;
-        height: 20%;
-      }
-      #image-container {
-        display: flex;
-        flex-wrap:wrap;
-        width: 100%;
-        flex-direction: row-reverse;
-        justify-content: flex-start;
-        padding-right: 2rem;
-        margin-right: 0;
-        z-index: 0;
-      }
-      #image-container img{
-        display: flex;
-        margin-right: 3rem;
-        width: 25%;
-        z-index: 2;
-        border:
-      }
-      #questions {
-        display: flex;
-        flex-flow: column;
-        z-index: 3;
-        position:absolute;
-        margin-top: 2rem;
-        margin-left: 7rem;
-        color: white;
-        height: 30rem;
-}
-input {
-  display: flex;
-  margin-top: 1rem;
-  border: 2px solid black;
-}
-.shadow {
-        display: flex;
-        flex-wrap:wrap;
-        width: 1%;
-        margin-top: .2%;
-        opacity: 20%;
-        background-color: grey;
-        flex-direction: row-reverse;
-        justify-content: flex-start;
-        box-shadow: 0 0 0 3px grey;
-}
-h1{
-  display: flex;
-  color:white;
-  width: 100%;
-  font-size: 400%;
-  font-family: Montserrat, sans-serif;
-  margin-top: 1.5;
-}
-#nametext{
-  display: flex;
-  color:white;
-  font-family: Montserrat, sans-serif;
-  font-size: 300%;
-  flex-wrap:wrap;
-  width: 90%;
-  flex-direction: row-reverse;
-  justify-content: flex-start;
-  text-shadow: 2px 2px grey;
-}
-button{
-  height: 100%;
-}
-    </style>
-  </head>
-  <body>
-    <div class =“madlogo”>
-      <h1 id = ‘title’>Codesmith</h1>
-      <img id = ‘madlibs-logo’ src = ‘https://i0.wp.com/keysweekly.com/wp-content/uploads/2019/09/madlibs.png?fit=1459%2C482&ssl=1’ alt = ‘libs-logo’>
-      <div></div>
-    </div>
-    <div class=“ad-lib” id=“ad-lib”>
-      <div id=“questions”>
-      </div>
-      <div id=“controls”>
-      </div>
-      <div id=“answer”>
-      </div>
-      <div id=“bio”>
-        <div class=“bio-detail”>
-        <div id=“image-container”>
-          <img src=“./images/kyle.png” alt=“”>
-          <div class=“shadow” Box Shaddow></div>
-        </div>
-      </div>
-    </div>
-    <button>Choose random Mad-Lib</button>
-    <div id = ‘nametext’>
-      <h2>Kyle</h2>
-    </div>
-    </div>
-  </body>
-  <script src=“app.js”></script>
-</html> -->
-
-
-<!-- <div class="madlogo">
-  <h1 id="title">Codesmith</h1>
-  <img id='madlibs-logo' src ='https://i0.wp.com/keysweekly.com/wp-content/uploads/2019/09/madlibs.png?fit=1459%2C482&ssl=1' alt='libs-logo'>
-  <div id="image-container"></div>
-</div> -->
